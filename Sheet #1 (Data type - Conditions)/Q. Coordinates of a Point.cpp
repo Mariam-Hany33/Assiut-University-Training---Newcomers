@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	// Q1   X  --> + , Y --> + 
+	// Q2   X  --> - , Y --> + 
+	// Q3   X  --> - , Y --> - 
+	// Q4   X  --> + , Y --> - 
+	// Origem   X  --> 0 , Y --> 0 
+	// Eixo X   Y --> 0 
+	// Eixo Y   X --> 0 
+	float X, Y;
+	cin>>X>>Y;
+	if (X > 0 && Y > 0)
+		cout << "Q1" << endl;
+	else if (X < 0 && Y>0)
+		cout << "Q2" << endl;
+	else if (X < 0 && Y < 0)
+		cout << "Q3" << endl;
+	else if (X > 0 && Y < 0)
+		cout << "Q4" << endl;
+	else if (X == 0 && Y == 0)
+		cout << "Origem" << endl;
+	else if (Y == 0 && (X > 0 || X < 0))
+		cout << "Eixo X" << endl;
+	else if (X == 0 && (Y > 0 || Y < 0))
+		cout << "Eixo Y" << endl;
+}
